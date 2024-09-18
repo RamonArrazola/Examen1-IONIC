@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PaginaTresPageRoutingModule } from './pagina-tres-routing.module';
 
 import { PaginaTresPage } from './pagina-tres.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PaginaTresPageRoutingModule
+    PaginaTresPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PaginaTresPage]
 })

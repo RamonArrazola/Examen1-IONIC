@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PaginaDosPageRoutingModule } from './pagina-dos-routing.module';
 
 import { PaginaDosPage } from './pagina-dos.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PaginaDosPageRoutingModule
+    PaginaDosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PaginaDosPage]
 })
