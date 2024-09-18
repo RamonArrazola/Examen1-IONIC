@@ -1,9 +1,22 @@
-<app-header></app-header>
+<app-header titulo="Pagina Uno"></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">PaginaUno</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-button (click)="onClick()" expand="block">
+      Mostrar Opciones
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox slot="end" [(ngModel)]="item.selected"></ion-checkbox>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+<!-- 
+    <ion-button (click)="verData()" expand="block" fill="solid">
+      Ver Data
+    </ion-button> -->
+
+  </ion-list>
+
 </ion-content>
+
