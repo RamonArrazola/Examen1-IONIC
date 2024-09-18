@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
+import { AppModule } from '../app.module';
 
 
 
@@ -11,7 +13,8 @@ import { IonicModule } from '@ionic/angular';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    RouterLink
   ],
   exports: [
     HeaderComponent

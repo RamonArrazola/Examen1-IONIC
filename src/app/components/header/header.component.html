@@ -1,6 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-back-button slot="start" defaultHref="/" text="Regresar" color="primary"></ion-back-button>
+    <!-- <ion-back-button slot="start" defaultHref="/" text="Regresar" color="primary"></ion-back-button> -->
+     <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+     </ion-buttons>
     <ion-title class="ion-text-capitalize">{{titulo}}</ion-title>
     <ion-buttons slot="end">
       <ion-chip color="primary" mode="ios" outline="true">
@@ -9,9 +14,6 @@
         </ion-avatar>
         <ion-label>Chip Avatar</ion-label>
       </ion-chip>
-      <!-- <ion-avatar>
-        <ion-img src="/assets/avatar-ico/avatar_02.png"></ion-img>
-      </ion-avatar>     -->
-    </ion-buttons>
+     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> 

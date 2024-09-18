@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,10 @@ export class HeaderComponent {
 
   @Input() titulo: string = '';
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
+
+  onClick() {
+    this.menu.toggle();
+  }
+
 }

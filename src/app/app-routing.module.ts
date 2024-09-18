@@ -7,11 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pagina-uno/pagina-uno.module').then( m => m.PaginaUnoPageModule)
   },
   {
-    path: '',
-    redirectTo: 'pagina-uno',
-    pathMatch: 'full'
-  },
-  {
     path: 'pagina-dos',
     loadChildren: () => import('./pages/pagina-dos/pagina-dos.module').then( m => m.PaginaDosPageModule)
   },
@@ -19,6 +14,11 @@ const routes: Routes = [
     path: 'pagina-tres',
     loadChildren: () => import('./pages/pagina-tres/pagina-tres.module').then( m => m.PaginaTresPageModule)
   },
+  {
+    path: '',
+    redirectTo: 'pagina-uno',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
