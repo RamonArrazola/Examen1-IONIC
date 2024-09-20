@@ -11,13 +11,15 @@
                     <ion-icon slot="icon-only" name="share-outline"></ion-icon>
                 </ion-item-option>
             </ion-item-options>
-            <ion-item (click)="onClick(item)">
-                <ion-label>
-                    <h3>{{item.name}}</h3>
-                    <p> {{item.email}} </p>
-                </ion-label>
-                <ion-label slot="end" class="ion-text-end text-small">{{item.phone}}</ion-label>
-            </ion-item>
+            <div class="ion-activatable ripple-parent rectangle">
+                <ion-item (click)="onClick(item)">
+                    <ion-label>
+                        <h3>{{item.name}}</h3>
+                        <p> {{item.email}} </p>
+                    </ion-label>
+                    <ion-label slot="end" class="ion-text-end text-small">{{item.phone}}</ion-label>
+                </ion-item>
+            </div>
     </ion-item-sliding>
     </ion-list>
 
@@ -38,3 +40,6 @@
     </ion-list>
 
 </ion-content>
+
+
+    
