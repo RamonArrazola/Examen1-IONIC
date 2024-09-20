@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button slot="start" color="primary" fill="clear" (click)="onClick()" class="button-small">
+      <ion-icon slot ="start" name="chevron-back-outline"></ion-icon>
+        Cerrar Modal
+      </ion-button>
+    <ion-title class="ion-text-capitalize">Persona</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre: {{item.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-card-content>
+       Correo: {{item.email}}
+      </ion-card-content>
+    </ion-item>
+    <ion-item class="bottom-padding">
+      <ion-card-content>
+        Telefono: {{item.phone}}
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
