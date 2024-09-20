@@ -8,6 +8,7 @@ import { PaginaDosPageRoutingModule } from './pagina-dos-routing.module';
 
 import { PaginaDosPage } from './pagina-dos.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { FiltroPipe } from 'src/app/pipes/filtro.pipe';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     PaginaDosPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    FiltroPipe
   ],
   declarations: [PaginaDosPage]
 })

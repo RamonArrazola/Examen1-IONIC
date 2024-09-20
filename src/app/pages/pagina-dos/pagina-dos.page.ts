@@ -14,7 +14,7 @@ import { ModalPage } from '../modal/modal.page';
 export class PaginaDosPage implements OnInit {
 
   usuarios: Observable<any> = new Observable<any>();
-
+  busqueda: string = '';
   carga : boolean = false;
 
   @ViewChild(IonList) Lista!: IonList;
@@ -54,5 +54,9 @@ export class PaginaDosPage implements OnInit {
       }
     });
     await modal.present();
+  }
+
+  onSearchChange(event: any){
+    this.busqueda = event.detail.value;
   }
 }

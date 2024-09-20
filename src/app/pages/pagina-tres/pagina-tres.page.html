@@ -4,7 +4,7 @@
     <div class="top-padding"></div>
     <ion-progress-bar [buffer]="buffer" [value]="progress"></ion-progress-bar>
     <div class="top-padding"></div>
-    <ion-range aria-label="Progress" [pin]="true" [pinFormatter]="pinFormatter" (ionChange)="onIonChange($event)">
+    <ion-range aria-label="Progress" [pin]="true" [pinFormatter]="pinFormatter" (ionChange)="onIonChange($event)" mode="md">
         <ion-icon slot="end" name="add-outline"></ion-icon>
         <ion-icon slot="start" name="remove-outline"></ion-icon>
     </ion-range>

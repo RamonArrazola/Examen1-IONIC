@@ -1,8 +1,9 @@
 <app-header titulo="Pagina Dos"></app-header>
 
 <ion-content [fullscreen]="true">
+    <ion-searchbar placeholder="Buscar Persona" show-clear-button="focus" [debounce]="250" (ionInput)="onSearchChange($event)" animated></ion-searchbar>
     <ion-list *ngIf="carga">
-        <ion-item-sliding *ngFor="let item of usuarios | async">
+        <ion-item-sliding *ngFor="let item of usuarios | async | filtro:busqueda">
             <ion-item-options side="start">
                 <ion-item-option color="success" expandable (click)="favorite(item.name)">
                     <ion-icon slot="icon-only" name="heart-outline"></ion-icon>

@@ -20,6 +20,8 @@ export class PaginaTresPage {
   }
 
   onIonChange(ev: Event) {
+    const value = (ev as RangeCustomEvent).detail.value;
+    this.progress = typeof value === 'number' ? (value/100) : value.lower;
     this.presentToast(ev);
   }
 
